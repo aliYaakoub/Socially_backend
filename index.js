@@ -26,4 +26,4 @@ app.use('/posts', postsRouter);
 app.use('/adminPost', adminRouter);
 
 
-app.listen('5000', () => console.log(`app live on http://localhost:5000`));
+// app.listen('5000', () => console.log(`app live on http://localhost:5000`));
