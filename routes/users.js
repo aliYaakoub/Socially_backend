@@ -1,7 +1,6 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
 import User from '../models/user.js';
-import axios from 'axios';
 
 const router = express.Router();
 
