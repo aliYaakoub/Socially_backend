@@ -1,11 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 import usersRouter from './routes/users.js';
 import postsRouter from './routes/posts.js';
 import adminRouter from './routes/adminPosts.js';
-dotenv.config();
+// dotenv.config();
 const app = express();
 app.use(cors());
 
