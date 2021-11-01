@@ -16,6 +16,7 @@ db.on('error', err => console.error(err));
 db.once('open', () => console.log('connected to MongoDB'));
 
 app.use(express.json());
+app.use(express.urlencoded({extended : true}));
 
 // first page
 app.get('/',(req, res) => {res.send('home page');})
@@ -26,4 +27,4 @@ app.use('/posts', postsRouter);
 app.use('/adminPost', adminRouter);
 
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 5000);
