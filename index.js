@@ -16,7 +16,6 @@ db.on('error', err => console.error(err));
 db.once('open', () => console.log('connected to MongoDB'));
 
 app.use(express.json());
-app.use(express.urlencoded({extended : true}));
 
 // first page
 app.get('/',(req, res) => {res.send('home page');})
