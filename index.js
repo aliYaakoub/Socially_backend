@@ -26,4 +26,4 @@ app.use('/posts', postsRouter);
 app.use('/adminPost', adminRouter);
 
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT);
