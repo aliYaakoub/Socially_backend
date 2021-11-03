@@ -6,15 +6,16 @@ const router = express.Router();
 
 router.get('/',async (req, res) => {
 
-    let { page, limit } = req.query;
+    // let { page, limit } = req.query;
 
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit
+    // const startIndex = (page - 1) * limit;
+    // const endIndex = page * limit
 
     try{
         const posts = await Post.find();
-        const filteredPosts = posts.slice(startIndex, endIndex);
-        res.json({filteredPosts, max: posts.length})
+        // const filteredPosts = posts.slice(startIndex, endIndex);
+        // res.json({filteredPosts, max: posts.length})
+        res.json(posts);
     }
     catch(err){
         res.status(500).json({message: err.message})
